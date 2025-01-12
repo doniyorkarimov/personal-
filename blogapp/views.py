@@ -9,7 +9,8 @@ from .models import *
 from reportlab.lib.pagesizes import letter
 from reportlab.pdfgen import canvas
 
-
+def home(request):
+    return render(request, 'home.html')
 def generate_pdf(request):
     # PDF faylini yaratish
     response = HttpResponse(content_type='application/pdf')
